@@ -33,15 +33,18 @@ public carrinhoDeCompras(){
     produtos = new ArrayList<>();
     total = 0.0;
     }
+    // função que adiciona produtos ao carrinho
     public void adicionarProduto(produto p){
         produtos.add(p);
         total += p.getPreco();
     }
+    // função que remove produtos do carrinho
     public void removePRoduto(produto p){
     if(produtos.remove(p)){
         total -= p.getPreco();
     }
     }
+    // função que calcula o total de itens no carrinho
     public double calcularTotal(){
     total = 0.0;
     for (produto p : produtos){

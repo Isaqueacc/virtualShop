@@ -23,7 +23,8 @@ public class Main {
         produto PV3 = new produtoDigital(8, "ebook", 45.00, 50.00, "pdf");
         produto PV4 = new produtoDigital(9,"foto",13.99,3.20, "png");
         produto PV5 = new produtoDigital(10,"arquivo", 70.00, 16.00, "mp4");
-        // TESTE DE CLASSE
+
+        // TESTE DE CLASSE (classe carrinhoDeCompras)
         //Criação do carrinho de compras
         carrinhoDeCompras carrinho = new carrinhoDeCompras();
         // adicionar produtos ao carrinho
@@ -43,7 +44,7 @@ public class Main {
         carrinho.removePRoduto(PV4);
 
         // exibir carrinho pós remoção
-        System.out.println("PRodutos no carriinho após remover item 'corrente' " );
+        System.out.println("Produtos no carriinho após remover item 'corrente' " );
         for (produto p : carrinho.getProdutos()) {
             System.out.println(p.getNome() + "- R$" + p.getPreco());
         }

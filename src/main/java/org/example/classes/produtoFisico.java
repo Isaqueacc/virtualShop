@@ -34,6 +34,7 @@ public class produtoFisico extends produto {
         this.peso = peso;
         this.dimensoes = dimensoes;
     }
+    // função que calcula frete (calculo teste apenas)
     public double calcularFrete(double cep){
         return peso * dimensoes/cep;
     }
