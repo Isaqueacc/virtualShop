@@ -1,6 +1,7 @@
 package org.example;
 
 
+import org.example.classes.carrinhoDeCompras;
 import org.example.classes.produto;
 import org.example.classes.produtoDigital;
 import org.example.classes.produtoFisico;
@@ -22,7 +23,32 @@ public class Main {
         produto PV3 = new produtoDigital(8, "ebook", 45.00, 50.00, "pdf");
         produto PV4 = new produtoDigital(9,"foto",13.99,3.20, "png");
         produto PV5 = new produtoDigital(10,"arquivo", 70.00, 16.00, "mp4");
+        // TESTE DE CLASSE
+        //Criação do carrinho de compras
+        carrinhoDeCompras carrinho = new carrinhoDeCompras();
+        // adicionar produtos ao carrinho
+        carrinho.adicionarProduto(PF1);
+        carrinho.adicionarProduto(PV4);
+        carrinho.adicionarProduto(PF2);
+        carrinho.adicionarProduto(PV5);
+        // exibir produtos
+        System.out.println("Produtos no carrinho");
+        for (produto p : carrinho.getProdutos()){
+            System.out.println(p.getNome() + " - R$" + p.getPreco());
+        }
+        // calcular e exibir o total
+        System.out.println("Total do carrinho: R$" + carrinho.calcularTotal());
 
+        //remover produto
+        carrinho.removePRoduto(PV4);
+
+        // exibir carrinho pós remoção
+        System.out.println("PRodutos no carriinho após remover item 'corrente' " );
+        for (produto p : carrinho.getProdutos()) {
+            System.out.println(p.getNome() + "- R$" + p.getPreco());
+        }
+            // calculando exibição total do carrinho após a remoção
+            System.out.println("Total do carrinho após a remoção da corrente: R$ " + carrinho.calcularTotal());
 
     }
 }
