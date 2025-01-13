@@ -36,6 +36,7 @@ public class produtoFisico extends produto {
     }
     // função que calcula frete (calculo teste apenas)
     public double calcularFrete(double cep){
+
         return peso * dimensoes/cep;
     }
     }
